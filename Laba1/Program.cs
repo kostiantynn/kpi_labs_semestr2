@@ -16,10 +16,7 @@ namespace Laba1 {
             Console.WriteLine(res);
         } 
         private static void Increment(int number, out int result) {
-            var index = Convert.ToString(number, 2).LastIndexOf('0');
-            result = number;
-            for (int i = 0; i < Convert.ToString(number, 2).Length - index; i = -~i)
-                result ^= 1 << i;
+            result = -~number;
         } 
         private static bool EqualityFunction(int number1, int number2) =>
             !Convert.ToBoolean(number1 ^ number2);

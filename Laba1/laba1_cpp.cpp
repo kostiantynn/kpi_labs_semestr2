@@ -33,15 +33,17 @@ bool EqualityFunction(int number1, int number2) {
 }
 
 void Increment(int &number) {
-	string binary = ConvertToBinary(number);
+	/*string binary = ConvertToBinary(number);
 	int index = binary.rfind('0');
-	int for_index = binary.length();
+	int for_index = sizeof(number);
 	for (int i = 0; i < for_index - index; i = -~i) {
 		number ^= (1 << i);
 	}
+	*/
+	number = -~number;
 }
 
-
+/*
 string ConvertToBinary(int number) {
 	if (number < 0) {
 		number += 256;
@@ -52,4 +54,4 @@ string ConvertToBinary(int number) {
 		number /= 2;
 	}
 	return result;
-}
+}*/
