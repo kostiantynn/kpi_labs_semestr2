@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace Laba2
 {
@@ -58,10 +57,10 @@ namespace Laba2
         {
             char[] digits = "1234567890".ToCharArray();
             float counter = 0;
-            for(int i = 0; i < text.Length; i++)
-                for(int j = 0; j < text[i].Length; j++)
-                  foreach(var elem in digits)
-                        if(elem == text[i].Source[j]) { counter++; }
+            for (int i = 0; i < text.Length; i++)
+                for (int j = 0; j < text[i].Length; j++)
+                    if (digits.Contains(text[i].Source[j]))
+                        counter++;
             return counter / textLength(text);
         }
         public void DisplayText()
