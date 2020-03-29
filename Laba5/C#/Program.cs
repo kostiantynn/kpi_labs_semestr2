@@ -8,11 +8,21 @@ namespace app
     {
         static void Main(string[] args)
         {
-            var str = new LetterString("qwertyuiopasdfghjklzxcvbnm");
-            Console.WriteLine(str.GetWholeValue());
+            var str = new LetterString("hello", "my", "friend");
+
+            void PrintValues(string[] strings)
+            {
+                foreach (var str in strings)
+                {
+                    Console.WriteLine(str);
+                }
+            }
+
+            PrintValues(str.GetWholeValue());
             str.AlphabeticSort();
-            Console.WriteLine(str.GetWholeValue());
+            PrintValues(str.GetWholeValue());
             Console.WriteLine(str.GetLength());
+            
         }
     }
 }

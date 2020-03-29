@@ -2,11 +2,11 @@
 {
     internal class BaseString
     {
-        private char[] StrValue { get; }
+        protected string[] StrValue { get; set; }
 
-        internal BaseString(string str)
+        internal BaseString(params string[] str)
         {
-            StrValue = str.ToCharArray();
+            StrValue = str;
         }
 
         public int GetLength() => StrValue.Length;

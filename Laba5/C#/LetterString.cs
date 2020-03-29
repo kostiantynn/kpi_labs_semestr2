@@ -5,12 +5,11 @@ namespace app
 {
     internal class LetterString : BaseString
     {
-        private char[] StrValue { get; set; }
-        internal LetterString(string str) : base(str)
+        internal LetterString(params string[] str) : base(str)
         {
-            if (str.All(char.IsLetter))
+            if (str.All(s => s.All(char.IsLetter)))
             {
-                StrValue = str.ToCharArray();
+                StrValue = str;
             }
             else
             {
@@ -18,9 +17,9 @@ namespace app
             }
         }
 
-        public char[] GetWholeValue() => this.StrValue;
+        public string[] GetWholeValue() => StrValue;
 
-        public char this[int index]
+        public string this[int index]
         {
             get
             {
@@ -36,7 +35,7 @@ namespace app
             }
         }
 
-        public void AlphabeticSort() =>  Array.Sort<char>(this.StrValue);
+        public void AlphabeticSort() =>  Array.Sort(StrValue);
 
     }
 }
