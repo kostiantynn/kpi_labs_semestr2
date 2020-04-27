@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 
 
 namespace laba_6
@@ -8,8 +7,16 @@ namespace laba_6
     {
         static void Main(string[] args)
         {
+            Log log = new Log();
             var expr = new arithmeticExpression(0.5, 0.5, -2);
-            Console.WriteLine(expr.CalculateExpression());
+            try
+            {
+                Console.WriteLine(expr.CalculateExpression());
+            }
+            catch (Exception e)
+            {
+                log.LogAnException(e);
+            }
         }
     }
 }
