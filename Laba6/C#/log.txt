@@ -1,0 +1,4 @@
+Created date:4/27/2020 5:12:31 PM	 Logs for: arithmeticExpression
+
+4/27/2020 5:12:31 PM:	System.DivideByZeroException: You cannot divide by zero. Denominator = 0;
+4/27/2020 5:12:31 PM:	System.ArithmeticException: You cannot take sqrt from negative value. d < 0;
