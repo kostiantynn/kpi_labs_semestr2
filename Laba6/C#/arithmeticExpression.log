@@ -1,0 +1,6 @@
+Created date:4/27/2020 7:54:44 PM	 Logs for: Log
+
+4/27/2020 7:54:44 PM:	System.DivideByZeroException: You cannot divide by zero. Denominator = 0;
+   at laba_6.arithmeticExpression.CalculateExpression() in C:\Users\Demien\projects\kpi\kpi_labs_semestr2\Laba6\C#\arithmeticExpression.cs:line 24
+   at laba_6.Program.Main(String[] args) in C:\Users\Demien\projects\kpi\kpi_labs_semestr2\Laba6\C#\Program.cs:line 14
+
